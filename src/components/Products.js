@@ -1,6 +1,20 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 
-export default function Products() {
+// Redux
+import { useSelector, useDispatch } from "react-redux";
+import { getProductsAction } from "../actions/productActions";
+
+const Products = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+
+    // Consultar la api
+    const loadProducts = () => dispatch(getProductsAction());
+    loadProducts();
+    
+  }, []);
+
   return (
     <Fragment>
       <h2 className="text-center my-5">Listado de Productos</h2>
@@ -16,4 +30,6 @@ export default function Products() {
       </table>
     </Fragment>
   );
-}
+};
+
+export default Products;
