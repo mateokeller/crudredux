@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Provider store={store}>
         <Header />
-        <div className="container mt-5">
+        <div className="container mt-4">
           <Routes>
             <Route path="/" element={<Products />} />
             <Route path="/products/new" element={<NewProduct />} />
