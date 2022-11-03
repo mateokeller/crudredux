@@ -1,14 +1,14 @@
 {
   "products": [
     {
-      "id": 1,
       "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
+      "precio": "31111",
+      "id": 1
     },
     {
-      "id": 2,
       "nombre": "Jugo de Naranja",
-      "precio": "1"
+      "precio": "1",
+      "id": 2
     },
     {
       "nombre": "Jugo de Naranja",
@@ -79,6 +79,26 @@
       "name": "Lechuga",
       "price": 10,
       "id": 16
+    },
+    {
+      "name": "asdrt",
+      "price": 488,
+      "id": 17
+    },
+    {
+      "name": "hjk",
+      "price": 213,
+      "id": 18
+    },
+    {
+      "name": "MICHEL DEL VILLAR P",
+      "price": 56,
+      "id": 19
+    },
+    {
+      "name": "Mateo",
+      "price": 7,
+      "id": 20
     }
   ]
 }

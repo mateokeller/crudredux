@@ -61,10 +61,29 @@ const AddProductError = (state) => ({
 export function getProductsAction() {
   return async (dispatch) => {
     dispatch(downloadProducts());
+
+    try {
+      //insertar la api
+      const response = await axiosClient.get("/products");
+      dispatch(productsDownloadSuccess(response.data));
+    } catch (error) {
+      dispatch(productsDownloadError());
+    }
   };
 }
 
 const downloadProducts = () => ({
   type: BEGIN_PRODUCTS_DOWNLOAD,
+  payload: true,
+});
+
+//  si la descarga es exitosa
+const productsDownloadSuccess = (products) => ({
+  type: PRODUCTS_DOWNLOAD_SUCCESS,
+  payload: products,
+});
+
+const productsDownloadError = () => ({
+  type: PRODUCTS_DOWNLOAD_ERROR,
   payload: true,
 });
