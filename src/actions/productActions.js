@@ -112,3 +112,8 @@ const getDeleteProducts = (id) => ({
 const deleteProductSuccess = () => ({
   type: DELETE_PRODUCT_SUCCESS,
 });
+
+const deleteProductError = () => ({
+  type: DELETE_PRODUCT_ERROR,
+  payload: true,
+});

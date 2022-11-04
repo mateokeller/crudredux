@@ -37,6 +37,7 @@ export default function productReducer(state = initialState, action) {
 
     case ADD_PRODUCT_ERROR:
     case PRODUCTS_DOWNLOAD_ERROR:
+    case DELETE_PRODUCT_ERROR:
       return {
         ...state,
         loading: false,
@@ -61,6 +62,7 @@ export default function productReducer(state = initialState, action) {
         products: state.products.filter(
           (products) => products.id !== state.deleteProduct
         ),
+        deleteProduct: null,
       };
 
     default:
