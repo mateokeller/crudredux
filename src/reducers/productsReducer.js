@@ -13,6 +13,7 @@ const initialState = {
   products: [],
   error: null,
   loading: false,
+  deleteProduct: null,
 };
 
 export default function productReducer(state = initialState, action) {
