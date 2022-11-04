@@ -20,16 +20,16 @@ export function CreateNewProductAction(product) {
 
     try {
       // insertar en la  API
-      await axiosClient.post("/products", product);
+      const response = await axiosClient.post("/products", product);
 
       // si todo sale bien, actualizar el state
-      dispatch(AddProductSuccess(product));
+      dispatch(addProductSuccess(response.data));
 
       // Alerta
       Swal.fire("Correcto", "El producto se agregó correctamente", "success");
     } catch (error) {
       // si hay un error cambiar el state
-      dispatch(AddProductError(true));
+      dispatch(addProductError(true));
 
       // Alerta de error
       Swal.fire({
@@ -47,13 +47,13 @@ const addProduct = () => ({
 });
 
 // si el producto se guarda en la base de datos
-const AddProductSuccess = (product) => ({
+const addProductSuccess = (product) => ({
   type: ADD_PRODUCT_SUCCESS,
   payload: product,
 });
 
 // si hubo un error
-const AddProductError = (state) => ({
+const addProductError = (state) => ({
   type: ADD_PRODUCT_ERROR,
   payload: state,
 });

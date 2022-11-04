@@ -24,8 +24,8 @@ export default function Product({ product }) {
       <td>
         <span className="font-weight-bold">$ {price}</span>{" "}
       </td>
-      <td className="accions">
-        <Link to={"/products/edit/${id}"} className="btn btn-primary mr-2">
+      <td className="actions">
+        <Link to={`/products/edit/${id}`} className="btn btn-primary mr-2">
           Editar
         </Link>
         <button

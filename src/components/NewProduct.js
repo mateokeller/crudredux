@@ -19,8 +19,6 @@ const NewProducts = () => {
   const loading = useSelector((state) => state.products.loading);
   const error = useSelector((state) => state.products.error);
 
-  console.log(loading);
-
   const addProduct = (product) => dispatch(CreateNewProductAction(product));
 
   // When user submits
