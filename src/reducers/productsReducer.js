@@ -6,6 +6,9 @@ import {
   BEGIN_PRODUCTS_DOWNLOAD,
   PRODUCTS_DOWNLOAD_SUCCESS,
   PRODUCTS_DOWNLOAD_ERROR,
+  GET_DELETE_PRODUCT,
+  DELETE_PRODUCT_SUCCESS,
+  DELETE_PRODUCT_ERROR,
 } from "../types";
 
 //cada reducer tiene su propio state
@@ -46,6 +49,18 @@ export default function productReducer(state = initialState, action) {
         loading: false,
         error: null,
         products: action.payload,
+      };
+    case GET_DELETE_PRODUCT:
+      return {
+        ...state,
+        deleteProduct: action.payload,
+      };
+    case DELETE_PRODUCT_SUCCESS:
+      return {
+        ...state,
+        products: state.products.filter(
+          (products) => products.id !== state.deleteProduct
+        ),
       };
 
     default:

@@ -5,6 +5,9 @@ import {
   BEGIN_PRODUCTS_DOWNLOAD,
   PRODUCTS_DOWNLOAD_SUCCESS,
   PRODUCTS_DOWNLOAD_ERROR,
+  GET_DELETE_PRODUCT,
+  DELETE_PRODUCT_SUCCESS,
+  DELETE_PRODUCT_ERROR,
 } from "../types";
 import axiosClient from "../config/axios";
 import Swal from "sweetalert2";
@@ -25,7 +28,6 @@ export function CreateNewProductAction(product) {
       // Alerta
       Swal.fire("Correcto", "El producto se agregó correctamente", "success");
     } catch (error) {
-      console.log(error);
       // si hay un error cambiar el state
       dispatch(AddProductError(true));
 
@@ -86,4 +88,27 @@ const productsDownloadSuccess = (products) => ({
 const productsDownloadError = () => ({
   type: PRODUCTS_DOWNLOAD_ERROR,
   payload: true,
+});
+
+// selecciona y elimina el producto
+
+export function deleteProductAction(id) {
+  return async (dispatch) => {
+    dispatch(getDeleteProducts(id));
+
+    try {
+      //insertar la api
+      await axiosClient.delete(`/products/${id}`);
+      dispatch(deleteProductSuccess());
+    } catch (error) {}
+  };
+}
+
+const getDeleteProducts = (id) => ({
+  type: GET_DELETE_PRODUCT,
+  payload: id,
+});
+
+const deleteProductSuccess = () => ({
+  type: DELETE_PRODUCT_SUCCESS,
 });

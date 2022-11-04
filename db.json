@@ -1,9 +1,39 @@
 {
   "products": [
     {
-      "name": "Rib Eye",
+      "name": "Jugo de Piña",
+      "price": 44156,
+      "id": 2
+    },
+    {
+      "name": "tomate",
+      "price": 56,
+      "id": 3
+    },
+    {
+      "name": "bife",
+      "price": 89,
+      "id": 4
+    },
+    {
+      "name": "forrosd",
+      "price": 789,
+      "id": 5
+    },
+    {
+      "name": "alex",
+      "price": 456,
+      "id": 6
+    },
+    {
+      "name": "ton",
       "price": 123,
-      "id": 1
+      "id": 7
+    },
+    {
+      "name": "MICHEL DEL VILLAR P",
+      "price": 123,
+      "id": 8
     }
   ]
 }
