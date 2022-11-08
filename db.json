@@ -1,14 +1,14 @@
 {
   "products": [
     {
-      "name": "Mateo",
-      "price": 89,
-      "id": 2
-    },
-    {
       "name": "Alex",
       "price": 89,
       "id": 3
+    },
+    {
+      "name": "Rib Eye",
+      "price": 50,
+      "id": 4
     }
   ]
 }

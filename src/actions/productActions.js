@@ -100,7 +100,17 @@ export function deleteProductAction(id) {
       //insertar la api
       await axiosClient.delete(`/products/${id}`);
       dispatch(deleteProductSuccess());
-    } catch (error) {}
+
+      //  si se elimina, mostrar alerta
+      Swal.fire(
+        "Eliminado!",
+        "El producto se elimino correctamente.",
+        "success"
+      );
+    } catch (error) {
+      console.log(error);
+      dispatch(deleteProductError());
+    }
   };
 }
 
