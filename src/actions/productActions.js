@@ -147,16 +147,20 @@ const getEditProductAction = (product) => ({
 // edita un registro en la api y state
 export function editProductAction(product) {
   return async (dispatch) => {
-    dispatch(editProduct(product));
+    dispatch(editProduct());
 
     try {
-      const result = await axiosClient.put(`/products/${product.id}`, product);
-      console.log(result);
+      await axiosClient.put(`/products/${product.id}`, product);
+      dispatch(editProductSuccess(product));
     } catch (error) {}
   };
 }
 
 const editProduct = (product) => ({
   type: BEGIN_EDIT_PRODUCT,
+});
+
+const editProductSuccess = (product) => ({
+  type: EDIT_PRODUCT_SUCCESS,
   payload: product,
 });

@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "Alex",
-      "price": 89,
+      "price": "697",
       "id": 3
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "name": "Lechuga",
-      "price": 200,
+      "price": "400",
       "id": 5
     },
     {
