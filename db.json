@@ -9,6 +9,31 @@
       "name": "Rib Eye",
       "price": 50,
       "id": 4
+    },
+    {
+      "name": "Lechuga",
+      "price": 200,
+      "id": 5
+    },
+    {
+      "name": "Cotonetes",
+      "price": 100,
+      "id": 6
+    },
+    {
+      "name": "Los preservativos de la cristina",
+      "price": 100,
+      "id": 7
+    },
+    {
+      "name": "New World",
+      "price": 1175,
+      "id": 8
+    },
+    {
+      "name": "Unas Manos Para Alekis",
+      "price": 100,
+      "id": 9
     }
   ]
 }
