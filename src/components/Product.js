@@ -6,8 +6,8 @@ import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
 import { deleteProductAction, getEditProduct } from "../actions/productActions";
 
-export default function Product({ product }) {
-  const { name, price, id } = product;
+export default function Product({ product: { name, price, id } }) {
+  // const { name, price, id } = product;
 
   const dispatch = useDispatch();
   const navigate = useNavigate(); // habilitar navigate para redireccion
