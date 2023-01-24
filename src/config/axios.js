@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "http://localhost:4000/",
+  baseURL: "https://functional-false-cobbler.glitch.me/",
 });
 
 export default axiosClient;

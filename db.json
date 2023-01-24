@@ -1,16 +1,6 @@
 {
   "products": [
     {
-      "name": "Rib Eye",
-      "price": "500",
-      "id": 4
-    },
-    {
-      "name": "Cotonetes",
-      "price": 100,
-      "id": 6
-    },
-    {
       "name": "New World",
       "price": 1175,
       "id": 8
@@ -19,6 +9,16 @@
       "name": "Lechuga",
       "price": 100,
       "id": 9
+    },
+    {
+      "name": "New product",
+      "price": 15000,
+      "id": 10
+    },
+    {
+      "name": "Nuevo Producto",
+      "price": 1500,
+      "id": 11
     }
   ]
 }
