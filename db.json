@@ -1,19 +1,9 @@
 {
   "products": [
     {
-      "name": "Alex",
-      "price": "697",
-      "id": 3
-    },
-    {
       "name": "Rib Eye",
       "price": "500",
       "id": 4
-    },
-    {
-      "name": "Lechuga",
-      "price": "400",
-      "id": 5
     },
     {
       "name": "Cotonetes",
@@ -21,18 +11,13 @@
       "id": 6
     },
     {
-      "name": "Los preservativos de la cristina",
-      "price": 100,
-      "id": 7
-    },
-    {
       "name": "New World",
       "price": 1175,
       "id": 8
     },
     {
-      "name": "Unas Manos Para Alekis",
-      "price": "200",
+      "name": "Lechuga",
+      "price": 100,
       "id": 9
     }
   ]
